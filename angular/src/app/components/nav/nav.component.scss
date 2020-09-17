@@ -1,0 +1,30 @@
+$color1: #000761;
+$color2: #44008B;
+$color3: #9F45B0;
+$color4: #E54ED0;
+
+#header{ 
+    background-color: $color2;
+    box-shadow: 0px 1px 5px;
+    ul{
+        width: 80%;
+        margin: auto;
+        li{
+
+            padding: 1em 1.5em;
+
+            &:hover{
+                background-color: #34026a;
+            }
+
+            a{
+                color: whitesmoke;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+
