@@ -12,7 +12,13 @@ export class UserService {
   private base_url:string;
   
 
+<<<<<<< HEAD
   constructor(private http:HttpClient) {this.base_url = "http://localhost:8080/zodiac/";}
+=======
+  constructor(private http:HttpClient) {
+    this.base_url = "http://localhost:8080/Zodiac/";
+  }
+>>>>>>> 789113519976bf1bc247681e5429663e2d5c1ebc
 
   getUser(): Observable<User[]>{
 
