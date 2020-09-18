@@ -1,6 +1,29 @@
+// variables
+@import 'variables';
+
+// styling
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald:wght@700&display=swap');
+
 h1, h2, h3, h4, h5, h6 {
-    font-family: fantasy;
+  font-family: 'Abril Fatface', cursive;
+  color: whitesmoke;
+}
+
+p{
+  font-family: 'Oswald', sans-serif;
+  color: whitesmoke;
+}
+
+article {
+  margin: 1rem 0;
+  border-radius: 10px;
+  background: $light;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
+

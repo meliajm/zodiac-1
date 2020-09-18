@@ -19,6 +19,7 @@ export class ZodiacService {
   }
 
   getZodiac(): Observable<Zodiac[]> {
+   
     const headerDict = {
       'Content-Type': 'application/json',
       'Accept': 'application/json',

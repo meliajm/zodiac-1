@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../services/user.service';
-import { User } from '../models/user';
-
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user';
 
 @Component({
   selector: 'app-following',
@@ -9,12 +8,12 @@ import { User } from '../models/user';
   styleUrls: ['./following.component.scss']
 })
 export class FollowingComponent implements OnInit {
- 
-  constructor(private userService:UserService) {}
-  
+
+  constructor(private userService:UserService) { }
+
   users: User[];
-  
-  ngOnInit():void {
+
+  ngOnInit(): void {
     this.userService.getUser().subscribe(
       (data) => {
         this.users = data;

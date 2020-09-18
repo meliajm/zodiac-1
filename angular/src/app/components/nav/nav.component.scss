@@ -9,9 +9,9 @@ $color4: #E54ED0;
     ul{
         width: 80%;
         margin: auto;
+        padding: 0;
         li{
-
-            padding: 1em 1.5em;
+            padding: 0.25em 0;
 
             &:hover{
                 background-color: #34026a;
@@ -28,3 +28,12 @@ $color4: #E54ED0;
 }
 
 
+@import '../../../_variables';
+
+.nav-link {
+    color: $lavender;
+}
+
+.nav-link:hover {
+    color: darken($lavender, 15%);
+}

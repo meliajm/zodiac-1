@@ -1,0 +1,16 @@
+<main class="container">
+    <section class="row">
+        <div *ngFor="let z of zodiacs" class="col-md-4 ">
+            <article class="zodiac-card p-4 cards">
+                <h2>{{z.name}}</h2>
+                <h1><span class="badge badge-info">{{ z.element }}</span></h1>
+                <p><b>Dates:</b> {{z.sun_dates[0]}} - {{z.sun_dates[1]}}</p>
+                <ul class="text-white">
+                    <li *ngFor="let i of z.compatibility">
+                        {{ i }}
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </section>
+</main>
