@@ -1,5 +1,13 @@
+@import '../../../_variables';
+body{
+    background-image: url("https://media.giphy.com/media/3ov9k1173PdfJWRsoE/giphy.gif");
+    background-color: black;
+    background-size: cover;
+    background-position-y: center;
+    min-height: 100vh;
+}
 #login{
-    width: 35%;
+    width: 33%;
     max-width: 750px;
     border: 1px solid;
     border-radius: 6px;
@@ -29,14 +37,14 @@
             border: none;
             background: transparent;
             color: white;
-            border-bottom: 2px solid #44008B;
+            border-bottom: 2px solid $color2;
             width: 100%;
             margin: 6px 0;
 
             &:valid ~ label, &:focus ~ label{
-                top: -24px;
+                top: -20px;
                 left: 0;
-                color: #44008B;
+                color: $color2;
                 font-size: 10px;
             }
         }
@@ -49,23 +57,32 @@
             color: white;
             pointer-events: none;
             transition: 0.5s;
+            font-family:'Oswald', sans-serif;
         }
     }
 
     button{
-        background-color: #44008B;
-        border: 2px solid #44008B;
+        background-color: $color2;
+        border:none;
         border-radius: 3em;
         color: white;
         padding: 0.5em;
         margin: 1em 0;
         width: 100%;
+
+        &:hover{
+             background-color: #310164;
+        }
     }
     p{
         padding-top: 1em;
         margin: 0;
         text-align: center;
         color: white;
+
+        a{
+            color:$color2;
+        }
     }
 
 }

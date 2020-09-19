@@ -1,17 +1,15 @@
-$color1: #000761;
-$color2: #44008B;
-$color3: #9F45B0;
-$color4: #E54ED0;
+@import '../../../_variables';
 
 #header{ 
     background-color: $color2;
-    box-shadow: 0px 1px 5px;
+    box-shadow: 0px 1px 15px black;
     ul{
-        width: 80%;
+        width: 70%;
         margin: auto;
         padding: 0;
+
         li{
-            padding: 0.25em 0;
+            padding: 0.25em;
 
             &:hover{
                 background-color: #34026a;
@@ -19,6 +17,9 @@ $color4: #E54ED0;
 
             a{
                 color: whitesmoke;
+                font-size: 18px;
+                font-family: $font1;
+
                 &:hover{
                     text-decoration: none;
                 }
@@ -28,7 +29,7 @@ $color4: #E54ED0;
 }
 
 
-@import '../../../_variables';
+
 
 .nav-link {
     color: $lavender;

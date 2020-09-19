@@ -14,6 +14,7 @@ export class NavComponent implements OnInit {
   ngOnInit(): void {
     if (sessionStorage.getItem('loggedin') == 'true') {
       this.hide = true;
+      
     }
   }
 
