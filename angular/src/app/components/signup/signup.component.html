@@ -1,58 +1,58 @@
-<body>
-    <main>
-    <div id="signup">
-        <h3 class="h3 mb-3">Register an account</h3>
-        <form method="post">
-            <div class="form-group text-box">
-                <input type="text" name="username" id="username" required/>
-                <small id="userHelp" class="form-text text-muted">Username must be unique.</small>
-                <label for="username">Username</label>
-            </div>
-            <div class="form-group text-box">
-                <input type="password" name="password" id="password" required/>
-                <label for="password">Password</label>
-                <small id="passHelp" class="form-text text-muted">Password is case sensitive.</small>
-            </div>
+<main>
+<div id="signup">
+    <h3 class="text-center">Register an account</h3>
+    <form method="post">
+        <div class="form-group text-box">
+            <input type="text" name="username" id="username" required/>
+            <small id="userHelp" class="form-text text-muted">Username must be unique.</small>
+            <label for="username">Username</label>
+        </div>
+        <div class="form-group text-box">
+            <input type="password" name="password" id="password" required/>
+            <label for="password">Password</label>
+            <small id="passHelp" class="form-text text-muted">Password is case sensitive.</small>
+        </div>
 
-            <div class="form-row">
-                <div class="form-group text-box col">
-                    <input type="text" name="fname" id="firstname" required/>
-                    <label for="firstname">First Name</label>
-                </div>
-                <div class="form-group text-box col">
-                    <input type="text" name="lname" id="lastname" required/>
-                    <label for="lastname">Last Name</label>
-                </div>
+        <div class="form-row">
+            <div class="form-group text-box col mr-3">
+                <input type="text" name="fname" id="firstname" required/>
+                <label for="firstname">First Name</label>
             </div>
-            <div class="form-row">
-                <div class="form-group col">
-                    <label for="gender">Gender: </label>
-                    <select class="form-control" name="gender" id="gender">
-                        <option value="1">Male</option>
-                        <option value="2">Female</option>
-                        <option value="3">Other</option>
-                    </select>
-                </div>
-                <div class="form-group col">
-                    <label for="dob">Date of Birth: </label>
+            <div class="form-group text-box col ml-3">
+                <input type="text" name="lname" id="lastname" required/>
+                <label for="lastname">Last Name</label>
+            </div>
+        </div>
+        <div class="row" id="gender-date">
+            <div class="col d-flex flex-column">
+                <label for="dob">Gender</label>
+                <span class="custom-dropdown">
                     <div class="input-group">
-                        <!-- <input class="form-control" type="date" name="dob" [(ngModel)]="date" ngbDatepicker
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected>Choose...</option>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                            <option value="3">Other</option>
+                        </select>
+                    </div>
+                </span>
+            </div>
+            <div class="col d-flex flex-column">
+                <label for="dob">Date of Birth</label>
+                <span class="custom-dropdown">
+                    <div class="input-group">
+                        <input class="form-control" type="date" name="dob" [(ngModel)]="date" ngbDatepicker
                             #d="ngbDatepicker" [minDate]="{year: 1930, month: 1, day: 1}"
                             [maxDate]="{year: 2020, month: 12, day: 31}" [placement]="placement"
-                            aria-describedby="dateHelp"> -->
-                        <div class="input-group-append">
-                            <!-- <button class="btn btn-info far fa-calendar-alt" (click)="d.toggle()" 
-                                type="button"></button>-->
-                        </div>
+                            aria-describedby="dateHelp">
                     </div>
-                    <small id="dateHelp" class="form-text text-muted">You must be 18 years or older to create an
-                        account.</small>
-                </div>
+                </span>
             </div>
-            <div class="text-center">
-                <button class="btn btn-primary" type="submit">Register</button>
-            </div>
-        </form>
-    </div>
-    </main>
-</body>
+            
+        </div> <small id="dateHelp" class="form-text text-muted text-center pt-3">You must be 18 years or older to create an account.</small>
+        <div class="text-center">
+            <button class="btn btn-primary" type="submit">Register</button>
+        </div>
+    </form>
+</div>
+</main>

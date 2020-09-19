@@ -1,4 +1,32 @@
 @import '../../../_variables';
+
+main{
+    background-image: url('../images/galaxy.jpg');
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #profile{width: 70%;}
+    #profile-header{
+        display: flex;
+        background-color: black;
+
+        #profile-info{
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            button{
+                background-color: $color1;
+                border: none;
+            }
+        }
+    }
+    
+}
+
 .profile img {
     width: 150px;
     height: auto;

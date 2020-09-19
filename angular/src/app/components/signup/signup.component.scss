@@ -1,29 +1,31 @@
 @import '../../../_variables';
-body{
-    //background-image: url("images/galaxy.jpg");
+main{
     background-image: url("https://media.giphy.com/media/3ov9k1173PdfJWRsoE/giphy.gif");
     background-color: black;
     background-size: cover;
     background-position-y: center;
     min-height: 100vh;
-
-    main{
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-    }
+      padding-top: 3em;
   }
 
 #signup{
-  width: 60%;
+  width: 40%;
   max-width: 750px;
   border: 1px solid;
   border-radius: 6px;
   padding: 2em 4em;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0,0,0,0.7);
   box-shadow: 0 15px 25px rgba(0,0,0, 0.2);
   box-sizing: border-box;
+
+  h3{
+    font-family:$font2
+  }
+
   .text-box{
     margin: 0;
     overflow: hidden;
@@ -57,33 +59,34 @@ body{
         color: white;
         pointer-events: none;
         transition: 0.5s;
-        font-family:'Oswald', sans-serif;
+        font-family: $font2;
     }
-}
-label{
-  padding-top: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: white;
-  pointer-events: none;
-  transition: 0.5s;
-  font-family:'Oswald', sans-serif;
-}
-}
-button{
-  background-color: $color2;
-  border:none;
-  border-radius: 3em;
-  color: white;
-  padding: 0.5em;
-  margin: 1em 0;
-  width: 100%;
+  }
 
-  &:hover{
-       background-color: #310164;
+  #gender-date{
+    label{
+      color: gray;
+      font-family: $font2;
+      font-size: 12px;
+    }
+  }
+
+  button{
+    background-color: $color2;
+    border:none;
+    border-radius: 3em;
+    color: white;
+    padding: 0.5em;
+    margin: 1em 0;
+    width: 50%;
+
+    &:hover{
+        background-color: #310164;
+    }
   }
 }
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-}
+
+
+// input[type="date"]::-webkit-calendar-picker-indicator {
+//   display: none;
+// }

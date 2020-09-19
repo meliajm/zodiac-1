@@ -1,5 +1,11 @@
 @import '../../../_variables';
 
+
+main{
+    background-image: url('../images/galaxy.jpg');
+    min-height: 100vh;
+}
+
 .h2 {
     color: $light;
 }
