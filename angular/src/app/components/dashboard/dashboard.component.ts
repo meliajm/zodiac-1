@@ -12,9 +12,9 @@ export class DashboardComponent implements OnInit {
   bday:string;
 
   ngOnInit(): void {
-    console.log(JSON.parse(sessionStorage.getItem('user')).username);
-    this.username = (JSON.parse(sessionStorage.getItem('user')).username);
-    this.bday = (JSON.parse(sessionStorage.getItem('user')).dateOfBirth);
+    console.log(JSON.parse(localStorage.getItem('user')).username);
+    this.username = (JSON.parse(localStorage.getItem('user')).username);
+    this.bday = (JSON.parse(localStorage.getItem('user')).dateOfBirth);
     console.log(this.bday);
 
 

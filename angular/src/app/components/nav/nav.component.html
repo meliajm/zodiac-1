@@ -1,7 +1,6 @@
-<nav class="nav navbar">
-    <a class="nav-link" routerLink="/" *ngIf="!isUserLoggedIn">Log In</a>
-    <a class="nav-link" routerLink="dashboard" *ngIf="isUserLoggedIn">Home</a>
-    <a class="nav-link" routerLink="zodiac" *ngIf="isUserLoggedIn">Zodiacs</a>
-    <a class="nav-link" routerLink="profile" *ngIf="isUserLoggedIn">Profile</a>
-    <a class="nav-link" (click)="logout()" *ngIf="isUserLoggedIn">Logout</a>
+<nav class="nav navbar" *ngIf="isUserLoggedIn">
+    <a class="nav-link" routerLink="dashboard">Home</a>
+    <a class="nav-link" routerLink="zodiac">Zodiacs</a>
+    <a class="nav-link" routerLink="profile">Profile</a>
+    <a class="nav-link" (click)="logout()">Logout</a>
 </nav>

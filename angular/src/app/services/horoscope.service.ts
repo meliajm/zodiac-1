@@ -14,7 +14,7 @@ export class HoroscopeService {
   private sunsign: User["zodiac"];
 
   constructor(private http: HttpClient) {
-    this.baseUrl = "http://horoscope-api.herokuapp.com/";
+    this.baseUrl = "http://horoscope-api.herokuapp.com";
   }
 
   getHoroscope(): Observable<Horoscope> {

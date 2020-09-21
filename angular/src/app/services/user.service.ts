@@ -32,8 +32,8 @@ export class UserService {
   }
 
   logout(user: User) {
-    sessionStorage.clear();
-    return this.http.get(`${this.base_url}/login`);
+    localStorage.clear();
+    return this.http.get(`${this.base_url}/login/logout`);
   }
 
   register(user: User): Observable<User> {

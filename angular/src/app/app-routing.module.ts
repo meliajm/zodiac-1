@@ -47,6 +47,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [DatashareService]
+  providers: [DatashareService,AuthGuard]
 })
 export class AppRoutingModule { }

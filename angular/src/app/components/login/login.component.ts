@@ -31,10 +31,10 @@ export class LoginComponent implements OnInit {
       password: this.password,
       first_name: '',
       last_name: '',
-      date_of_birth: '',
-      zodiac: '',
+      dateOfBirth: '',
       description: '',
-      gender: 0
+      gender: 0,
+      picture: null
     }
 
     this.loading = true;
