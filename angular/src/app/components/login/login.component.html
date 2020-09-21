@@ -14,7 +14,10 @@
                         <input class="form-control" type="password" name="password" [(ngModel)]="password" placeholder="password"/>
                     </div>
                     <div class="text-center">
-                        <button class="btn btn-primary btn-lg" type="submit" (click)="login()">Login</button>
+                        <button [disabled]="loading" class="btn btn-primary btn-lg" type="submit" (click)="login()">
+                            <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>
+                            Login
+                        </button>
                     </div>
                 </form>
                 <p class="mt-3 text-align-right">Don't have an account? <a routerLink="register">Sign up for one!</a>

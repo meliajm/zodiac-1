@@ -24,14 +24,14 @@ export class YourZodiacComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.bday =  new Date(JSON.parse(sessionStorage.getItem('user')).dateOfBirth).toUTCString();
+    this.bday =  new Date(JSON.parse(localStorage.getItem('user')).dateOfBirth).toUTCString();
     this.bdayMonth = this.bday.split(' ')[2];
     this.bdayDay = this.bday.split(' ')[1];
-    this.username = (JSON.parse(sessionStorage.getItem('user')).username);
-    this.firstName = (JSON.parse(sessionStorage.getItem('user')).firstName);
-    this.lastName = (JSON.parse(sessionStorage.getItem('user')).lastName);
+    this.username = (JSON.parse(localStorage.getItem('user')).username);
+    this.firstName = (JSON.parse(localStorage.getItem('user')).firstName);
+    this.lastName = (JSON.parse(localStorage.getItem('user')).lastName);
 
-    "new Date(dateofbirth).toUTCString" 
+    // "new Date(dateofbirth).toUTCString" 
     // this.bday = 'Sept';
     console.log(this.bdayMonth);
     console.log(this.bdayDay);

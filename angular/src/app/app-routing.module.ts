@@ -7,7 +7,8 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { ZodiacHomeComponent } from './components/zodiac-home/zodiac-home.component';
 import { FollowingComponent} from './components/following/following.component';
 import { HoroscopeComponent } from './components/horoscope/horoscope.component';
-import { MoreInfoComponent } from './more-info/more-info.component';
+import { DatashareService } from './services/datashare.service';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
   {
@@ -20,25 +21,22 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'zodiac',
-    component: ZodiacHomeComponent,
-    children: [
-      {
-      path: ':name',
-      component: MoreInfoComponent
-      }
-    ]
+    component: ZodiacHomeComponent
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'user',
-    component: FollowingComponent
+    component: FollowingComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'horoscope',
@@ -48,6 +46,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [DatashareService]
 })
 export class AppRoutingModule { }

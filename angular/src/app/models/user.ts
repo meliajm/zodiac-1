@@ -28,9 +28,8 @@ export class User {
         this.first_name = first_name;
         this.last_name = last_name;
         this.date_of_birth = date_of_birth;
-        this.zodiac = zodiac;
+        this.zodiac = zodiac,
         this.description = description;
         this.gender = gender;
     }
-    
 }

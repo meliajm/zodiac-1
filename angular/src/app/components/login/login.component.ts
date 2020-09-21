@@ -12,14 +12,13 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private loginService: UserService,
-    private router: Router,
-    private route: ActivatedRoute
+    private router: Router
     ) { }
 
   user: User;
   username: string;
   password: string;
-  loading: false;
+  loading = false;
 
   ngOnInit(): void {
     
@@ -38,14 +37,16 @@ export class LoginComponent implements OnInit {
       gender: 0
     }
 
+    this.loading = true;
     this.loginService.login(this.user).subscribe(
       (response: User) => {
         this.user = response;
-        sessionStorage.setItem('user', JSON.stringify(this.user));
-        sessionStorage.setItem('loggedin', 'true');
-        console.log(sessionStorage);
+        localStorage.setItem('user', JSON.stringify(this.user));
+        localStorage.setItem('loggedin', 'true');
+        console.log(localStorage);
         this.router.navigate(['/dashboard']);
       }, error => {
+        this.loading = false;
         console.log("what happened... it didn't work!");
       }
     );
